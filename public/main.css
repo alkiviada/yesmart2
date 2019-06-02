@@ -1,0 +1,274 @@
+:root {
+  --title-font: titillium;
+  --body-font: PT Sans;
+  --subtitle-font: bebas bold;
+  --bg-color: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: titillium;
+  src: url(TitilliumText25L004.otf);
+}
+
+@font-face {
+  font-family: bebas;
+  src: url(BebasNeue\ Regular.otf);
+}
+@font-face {
+  font-family: bebas bold;
+  src: url(BebasNeue\ Bold.otf);
+}
+
+html {
+  width:100%;
+  min-width:100%
+}
+
+body {
+  font-family: var(--body-font);
+  text-rendering: optimizeLegibility;
+  max-height: 100%;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  font-size: calc(18px + 0.25vw);
+  line-height: calc(1.5em + 0.2vw);
+  display:block;
+  background-image: url("city.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* start general container */
+
+.yesm-container {
+  max-height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 3em 1fr 5em;
+}
+
+/* end general container */
+
+/* start header */
+
+.header {
+  display: grid;
+  grid-template-areas: "main-link . nav";
+  grid-template-columns: 1em 1fr auto;
+  background-color: black; 
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  grid-area: nav;
+}
+.top-nav-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top-nav-li {
+  padding-right: 2em;
+  list-style-type: none;
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  color: white;
+  text-transform: uppercase;
+}
+/* end header */
+
+/* start skip-title */
+
+.skip-title {
+  background-color: var(--bg-color);
+  display: grid;
+  grid-template-areas: "button1 . button2";
+  grid-template-columns: 1fr;
+}
+
+.skip-title-button.button1 {
+  grid-area: button1;
+}
+
+.skip-title-button.button2 {
+  grid-area: button2;
+}
+
+.skip-title-button {
+  cursor: pointer;
+  transform: rotate(90deg);
+  color: white;
+  font-size: 1.5em;
+  background-color: black;
+  border: none;
+  width: 2em;
+  height: 2em;
+  font-family: var(--title-font);
+}
+.skip-title-button:focus {
+  outline: none;
+  border-style: solid;
+  border-color: white;
+  border-size: 1px;
+}
+
+.skip-title-button:active {
+  outline: none;
+  border-style: solid;
+  border-color: red;
+  border-size: 1px;
+}
+
+/* end skip-title */
+
+/* start title */
+.title-wrapper {
+  position: relative;
+  height: calc(100vh - 2.8em);
+  width: 100vw;
+  display: grid;
+  background-image: url("city.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
+.title-svg {   
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media(max-width: 800px) {
+.title-svg {   
+  width: 70%;
+  }
+}
+@media(max-width: 600px) {
+.title-svg {   
+  width: 80%;
+  }
+}
+@media(max-width: 400px) {
+.title-svg {   
+  width: 90%;
+  }
+}
+
+
+.title-text {
+  font-size: 5px;
+  font-family: var(--title-font);
+  font-variant: small-caps;
+  fill: white;
+  stroke: white;
+  stroke-width: .2px;
+}
+
+.subtitle-text {
+  font-size: 2.3px;
+  font-family: var(--subtitle-font);
+  letter-spacing: .2px;
+  fill: red;
+}
+.subtitle-shadow-text {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 2.3px;
+  font-family: var(--subtitle-font);
+  letter-spacing: .2px;
+  fill: gray;
+  stroke: gray;
+  stroke-width: .25px;
+}
+/* end title */
+
+/* start main */
+
+main {
+  padding: 2em 3em 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+section {
+  display: grid;
+  grid-template-columns: 3.3em auto;
+  grid-template-rows: 1fr; 
+}
+
+.section-text-wrapper {
+  font-size: 1.1rem;
+  color: rgba(0,0,0, .8);
+  margin-top: .6em;
+}
+
+.section-subhead {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-family: var(--body-font);
+  font-size: 1.5rem;
+  line-height: 1px;
+}
+
+.section-icon {
+  stroke: none;
+  fill: grey;
+}
+
+.section-icon:hover {
+  fill:red;
+  transition: fill .3s ease;
+}
+
+.heading-icon {
+  width: 2.8em;
+  margin-top: -2.2em;
+  height: auto;
+  pointer-events: fill;
+  cursor: pointer;
+}
+
+.icon-internals {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+.svg-icons {
+  display: none;
+}
+
+/* end main */
+
+/* helper styles */
+.visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
