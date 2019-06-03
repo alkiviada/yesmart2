@@ -27,8 +27,8 @@ class Home extends Component {
         <SVGSprites />
         <Title />
         <div className="skip-title">
-          <button className="skip-title-button button1" onClick={this.onClick}>></button>
-          <button className="skip-title-button button2" onClick={this.onClick}>></button>
+          <button className="skip-title-button button1" aria-hidden="true" onClick={this.onClick} aria-label="skip to main">></button>
+          <button className="skip-title-button button2" aria-hidden="true" onClick={this.onClick} aria-label="Skip to Main">></button>
         </div>
         <Header headerRef={this.mainRef}/>
         <main  className="home" role="main">

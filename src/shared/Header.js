@@ -7,35 +7,29 @@ class Header extends Component {
     const { location } = this.props
     const navLnks = [ '/', '/login', '/services' ]
     const active = navLnks.find(l => l == location.pathname)
+    const navLnksCnames = navLnks.reduce((o, l) =>
+      (o[l] = active == l ? 'top-nav-link current' : 'top-nav-link', o), {});
     return (
         <header ref={this.props.headerRef} role="banner" className="header">
-         <h1 className="title-header">
-           <span className="big">Y</span>
-           <span className="small">E</span>
-           <span className="big">S</span>
-          <span className="sub">MART</span></h1>
-         <nav role="navigation" area-label="Yesmart Menu" className="top-nav">
+         <h1 role="heading" aria-label="Yesmart" className="title-header">
+           <span className="big" aria-hidden="true">Y</span>
+           <span className="small" aria-hidden="true">E</span>
+           <span className="big" aria-hidden="true">S</span>
+           <span className="sub" aria-hidden="true">MART</span>
+         </h1>
+         <nav role="navigation" aria-label="Yesmart Menu" className="top-nav">
            <ul className="top-nav-list">
              <li className="top-nav-li">
-               { active == '/' ? 
-                  <span className="current-page">Home</span> : 
-                  <a href="/" className="top-nav-link">Home</a>
-               }
+                <a href="/" className={navLnksCnames['/']} aria-label={active == '/' ? "Home Current page" : ''}>Home</a>
              </li>
              <li className="top-nav-li">
-               { active == '/services' ? 
-                  <span className="current-page">Our Services</span> : 
-                  <a href="/services" className="top-nav-link">Our Services</a>
-               }
+                <a href="/services" className={navLnksCnames['/services']} aria-label={active == '/services' ? "Our services Current page" :'' } >Our Services</a>
              </li>
              <li className="top-nav-li">
               <button className="top-nav-button" onClick={this.props.toContact}>Contact</button>
              </li>
              <li className="top-nav-li">
-               { active == '/login' ? 
-                  <span className="current-page">Login</span> : 
-                  <a href="/login" className="top-nav-link">lOGIN</a>
-               }
+                <a href="/login" className={navLnksCnames['/login']} aria-label={active == '/login' ? "Login Current page" : '' }>lOGIN</a>
              </li>
            </ul>
          </nav>

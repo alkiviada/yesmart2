@@ -99,14 +99,11 @@ body {
   font-size: 1.4rem;
   position: absolute;
 }
-.current-page {
-  color: var(--red-text-color);
-  font-weight: 700;
-}
 .top-nav-link:link {
   color: white;
   text-decoration: none;
 }
+
 .top-nav-link:visited {
   color: rgba(180, 180, 180, 1);
 }
@@ -118,6 +115,21 @@ body {
 .top-nav-link:active, .top-nav-button:active {
   font-weight: bolder;
   color: rgba(var(--red-text-rgb), 1);
+}
+.top-nav-link:focus {
+  outline: none;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, .7);
+  border-size: 1px;
+  border-width: 1px;
+  height: 100%;
+}
+
+.current {
+  pointer-events: none;
+  cursor: default;
+  color: var(--red-text-color) !important;
+  font-weight: 700;
 }
 
 .top-nav-button {
@@ -336,6 +348,7 @@ section h2 {
 }
 
 .heading-icon {
+  align-self: start;
   width: 2.8em;
   margin-top: -2.5em;
   height: auto;
