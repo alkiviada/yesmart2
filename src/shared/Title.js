@@ -21,8 +21,8 @@ class Title extends Component {
 <text x="4" y="0" className="title small">E</text>
 <text x="8" y="0" className="title big">S</text>
 <text x="12" y="1.7" className="title small">MART</text>
-<text x="-14.5" y="7.5" className="subtitle shadow">УМНЫЕ РЕШЕНИЯ</text>
-<text x="4.5" y="13.5" className="subtitle shadow">ДЛЯ ВАШЕГО БИЗНЕСА</text>
+<text x="-14.5" y="8.3" className="subtitle shadow">УМНЫЕ РЕШЕНИЯ</text>
+<text x="4.5" y="14.3" className="subtitle shadow">ДЛЯ ВАШЕГО БИЗНЕСА</text>
 <text x="-15" y="7" className="subtitle">УМНЫЕ РЕШЕНИЯ</text>
 <text x="4" y="13" className="subtitle">ДЛЯ ВАШЕГО БИЗНЕСА</text>
         </svg>

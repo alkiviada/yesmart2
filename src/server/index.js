@@ -29,7 +29,7 @@ app.get("*", (req, res, next) => {
       <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>YeSmart</title>
-        <link href="//fonts.googleapis.com/css?family=PT+Sans|Yanone+Kaffeesatz:400|Architects+Daughter:400" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=PT+Sans:400,600,700,900|Architects+Daughter:400" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/main.css">
         <script src="/bundle.js" defer></script>
       </head>

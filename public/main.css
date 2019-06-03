@@ -1,8 +1,11 @@
 :root {
   --title-font: titillium;
+  --title-bold-font: titillium bold;
   --body-font: PT Sans;
   --subtitle-font: bebas bold;
   --bg-color: #2a2a2a;
+  --red-text-color: #de5e60;
+  --red-text-rgb: 222, 94, 96;
 }
 
 * {
@@ -16,6 +19,10 @@
   src: url(TitilliumText25L004.otf);
 }
 
+@font-face {
+  font-family: titillium bold;
+  src: url(TitilliumText25L002.otf);
+}
 @font-face {
   font-family: bebas;
   src: url(BebasNeue\ Regular.otf);
@@ -66,8 +73,74 @@ body {
 .header {
   display: grid;
   grid-template-areas: "main-link . nav";
-  grid-template-columns: 1em 1fr auto;
+  grid-template-columns: 1fr auto;
   background-color: black; 
+  position: relative;
+}
+
+.title-header {
+  position: absolute;
+  top: .3em;
+  left: .3em;
+  color: white;
+  font-variant: small-caps;
+  font-family: var(--title-bold-font);
+}
+
+.title-header .big {
+  font-size: 1.6rem;
+}
+.title-header .small {
+  font-size: 1.4rem;
+}
+
+.title-header .sub {
+  top: .5em;
+  font-size: 1.4rem;
+  position: absolute;
+}
+.current-page {
+  color: var(--red-text-color);
+  font-weight: 700;
+}
+.top-nav-link:link {
+  color: white;
+  text-decoration: none;
+}
+.top-nav-link:visited {
+  color: rgba(180, 180, 180, 1);
+}
+
+.top-nav-link:hover {
+  color: rgba(var(--red-text-rgb), .8);
+}
+
+.top-nav-link:active, .top-nav-button:active {
+  font-weight: bolder;
+  color: rgba(var(--red-text-rgb), 1);
+}
+
+.top-nav-button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 .2em;
+}
+
+.top-nav-button:focus {
+  outline: none;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, .7);
+  border-size: 1px;
+  border-width: 1px;
+  height: 100%;
+}
+.top-nav-button:hover {
+  color: rgba(var(--red-text-rgb), .8);
 }
 
 .top-nav {
@@ -75,6 +148,7 @@ body {
   align-items: center;
   grid-area: nav;
 }
+
 .top-nav-list {
   display: flex;
   width: 100%;
@@ -122,6 +196,7 @@ body {
 .skip-title-button:focus {
   outline: none;
   border-style: solid;
+  border-width: 1px;
   border-color: white;
   border-size: 1px;
 }
@@ -129,7 +204,7 @@ body {
 .skip-title-button:active {
   outline: none;
   border-style: solid;
-  border-color: red;
+  border-color: var(--red-text-color);
   border-size: 1px;
 }
 
@@ -188,15 +263,18 @@ body {
 }
 
 .subtitle {
+  --red: #ee4342;
   font-family: var(--subtitle-font);
-  fill: red;
+  fill: var(--red);
   letter-spacing: .1px;
   font-size: 5px;
 }
+
 .shadow {
-  fill: grey;
-  stroke: grey;
-  stroke-width: .4px;
+  --grey: #343434;
+  fill: var(--grey);
+  stroke: var(--grey);
+  stroke-width: .5px;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -229,8 +307,12 @@ section {
 
 .section-text-wrapper {
   font-size: 1.1rem;
-  color: rgba(0,0,0, .8);
+  color: rgba(0,0,0, .7);
   margin-top: .6em;
+}
+section h2 {
+  font-weight: 600;
+  color: rgba(0, 0, 0, .7);
 }
 
 .section-subhead {
@@ -243,12 +325,13 @@ section {
 }
 
 .section-icon {
+  --grey: #686a6d;
   stroke: none;
-  fill: grey;
+  fill: var(--grey);
 }
 
 .section-icon:hover {
-  fill:red;
+  fill:var(--red-text-color);
   transition: fill .3s ease;
 }
 
