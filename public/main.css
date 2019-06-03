@@ -112,7 +112,7 @@ body {
   cursor: pointer;
   transform: rotate(90deg);
   color: white;
-  font-size: 1.5em;
+  font-size: 1.2em;
   background-color: black;
   border: none;
   width: 2em;
@@ -174,49 +174,57 @@ body {
   }
 }
 
-
-.title-text {
-  font-size: 5px;
+.title {
   font-family: var(--title-font);
-  font-variant: small-caps;
   fill: white;
   stroke: white;
-  stroke-width: .2px;
+  stroke-width: .4px;
+}
+.big {
+  font-size: 8px;
+}
+.small {
+  font-size: 7px;
 }
 
-.subtitle-text {
-  font-size: 2.3px;
+.subtitle {
   font-family: var(--subtitle-font);
-  letter-spacing: .2px;
   fill: red;
+  letter-spacing: .1px;
+  font-size: 5px;
 }
-.subtitle-shadow-text {
+.shadow {
+  fill: grey;
+  stroke: grey;
+  stroke-width: .4px;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 2.3px;
-  font-family: var(--subtitle-font);
-  letter-spacing: .2px;
-  fill: gray;
-  stroke: gray;
-  stroke-width: .25px;
 }
+
 /* end title */
 
 /* start main */
 
 main {
-  padding: 2em 3em 0;
+  padding: 2em 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+section:first-child {
+  padding: 0 1em 0 2em;
+}
+section:last-child {
+  padding: 0 2em 0 1em;
 }
 
 section {
   display: grid;
   grid-template-columns: 3.3em auto;
   grid-template-rows: 1fr; 
+  padding: 0 1em;
 }
 
 .section-text-wrapper {
@@ -226,11 +234,12 @@ section {
 }
 
 .section-subhead {
+  display: block;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-family: var(--body-font);
   font-size: 1.5rem;
-  line-height: 1px;
+  line-height: 1;
 }
 
 .section-icon {
@@ -245,7 +254,7 @@ section {
 
 .heading-icon {
   width: 2.8em;
-  margin-top: -2.2em;
+  margin-top: -2.5em;
   height: auto;
   pointer-events: fill;
   cursor: pointer;
