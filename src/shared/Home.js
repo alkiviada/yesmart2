@@ -7,6 +7,8 @@ import Address from './Address'
 import ASystems from './ASystems'
 import Monitor from './Monitor'
 import LIR from './LIR'
+import Domain from './Domain'
+import Consult from './Consult'
 
 class Home extends Component {
   constructor(props) { 
@@ -37,6 +39,8 @@ class Home extends Component {
         <ASystems />
         <Monitor />
         <LIR />
+        <Domain />
+        <Consult />
         </main> 
         <footer role="contentinfo">
         <h2></h2>

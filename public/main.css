@@ -102,6 +102,7 @@ body {
 .top-nav-link:link {
   color: white;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(.215,.61,.355,1);
 }
 
 .top-nav-link:visited {
@@ -116,6 +117,7 @@ body {
   font-weight: bolder;
   color: rgba(var(--red-text-rgb), 1);
 }
+
 .top-nav-link:focus {
   outline: none;
   border-style: solid;
@@ -141,6 +143,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   padding: 0 .2em;
+  transition: color 250ms cubic-bezier(.215,.61,.355,1);
 }
 
 .top-nav-button:focus {
@@ -204,7 +207,13 @@ body {
   width: 2em;
   height: 2em;
   font-family: var(--title-font);
+  transition: color 250ms cubic-bezier(.215,.61,.355,1);
 }
+
+.skip-title-button:hover {
+  color: var(--red-text-color);
+}
+
 .skip-title-button:focus {
   outline: none;
   border-style: solid;
@@ -301,7 +310,7 @@ body {
 main {
   padding: 2em 0;
   display: grid;
-  row-gap: 1.5em;
+  grid-row-gap: 1.5em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
 }
@@ -342,11 +351,11 @@ section h2 {
   --grey: #686a6d;
   stroke: none;
   fill: var(--grey);
+  transition: fill 250ms cubic-bezier(.215,.61,.355,1);
 }
 
 .section-icon:hover {
   fill:var(--red-text-color);
-  transition: fill .3s ease;
 }
 
 .heading-icon {
@@ -361,6 +370,14 @@ section h2 {
 .icon-internals {
   stroke: black;
   stroke-width: 1px;
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: square;
+}
+
+.icon-details {
+  stroke: black;
+  stroke-width: .7px;
   fill: none;
 }
 
