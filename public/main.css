@@ -81,7 +81,7 @@ body {
 .title-header {
   position: absolute;
   top: .3em;
-  left: .3em;
+  left: .5em;
   color: white;
   font-variant: small-caps;
   font-family: var(--title-bold-font);
@@ -301,12 +301,14 @@ body {
 main {
   padding: 2em 0;
   display: grid;
+  row-gap: 1.5em;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
 }
-section:first-child {
+section:nth-child(4), section:first-child {
   padding: 0 1em 0 2em;
 }
-section:last-child {
+section:nth-child(3) {
   padding: 0 2em 0 1em;
 }
 

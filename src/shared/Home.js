@@ -6,6 +6,7 @@ import Header from './Header'
 import Address from './Address'
 import ASystems from './ASystems'
 import Monitor from './Monitor'
+import LIR from './LIR'
 
 class Home extends Component {
   constructor(props) { 
@@ -35,8 +36,11 @@ class Home extends Component {
         <Address />
         <ASystems />
         <Monitor />
+        <LIR />
         </main> 
         <footer role="contentinfo">
+        <h2></h2>
+        <span></span>
         </footer>
       </Fragment>
     )
