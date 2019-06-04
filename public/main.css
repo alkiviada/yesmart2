@@ -1,9 +1,11 @@
 :root {
   --title-font: titillium;
   --title-bold-font: titillium bold;
+  --title-light-font: titillium light;
   --body-font: PT Sans;
   --subtitle-font: bebas bold;
   --bg-color: #2a2a2a;
+  --grey-color-rgb: 52, 52, 52;
   --red-text-color: #de5e60;
   --red-text-rgb: 222, 94, 96;
 }
@@ -18,10 +20,14 @@
   font-family: titillium;
   src: url(TitilliumText25L004.otf);
 }
+@font-face {
+  font-family: titillium light;
+  src: url(TitilliumText25L005.otf);
+}
 
 @font-face {
   font-family: titillium bold;
-  src: url(TitilliumText25L002.otf);
+  src: url(TitilliumText25L001.otf);
 }
 @font-face {
   font-family: bebas;
@@ -44,15 +50,9 @@ body {
   min-height: 100vh;
   height: 100%;
   width: 100%;
-  background-attachment: fixed;
   font-size: calc(18px + 0.25vw);
   line-height: calc(1.5em + 0.2vw);
   display:block;
-  background-image: url("city.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 /* start general container */
@@ -91,12 +91,13 @@ body {
   font-size: 1.6rem;
 }
 .title-header .small {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .title-header .sub {
-  top: .5em;
-  font-size: 1.4rem;
+  top: .8em;
+  left: 2em;
+  font-size: 1.2rem;
   position: absolute;
 }
 .top-nav-link:link {
@@ -314,14 +315,14 @@ main {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
 }
-section:nth-child(4), section:first-child {
+main section:nth-child(4), section:first-child {
   padding: 0 1em 0 2em;
 }
-section:nth-child(3) {
+main section:nth-child(3) {
   padding: 0 2em 0 1em;
 }
 
-section {
+main section {
   display: grid;
   grid-template-columns: 3.3em auto;
   grid-template-rows: 1fr; 
@@ -333,7 +334,7 @@ section {
   color: rgba(0,0,0, .7);
   margin-top: .6em;
 }
-section h2 {
+main section h2 {
   font-weight: 600;
   color: rgba(0, 0, 0, .7);
 }
@@ -341,8 +342,8 @@ section h2 {
 .section-subhead {
   display: block;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  font-family: var(--body-font);
+  letter-spacing: -.5px;
+  font-family: var(--title-bold-font);
   font-size: 1.5rem;
   line-height: 1;
 }
@@ -386,6 +387,98 @@ section h2 {
 }
 
 /* end main */
+
+/* start footer */
+footer {
+  background-attachment: fixed;
+  background-image: url("city.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(var(--grey-color-rgb), .9);
+  color: white;
+  display: grid;
+  grid-template-rows: 4em 2em 1fr;
+  place-items: center;
+  height: 30em;
+}
+
+footer span, h2 {
+  font-family: var(--title-light-font);
+}
+
+footer h2 {
+  font-size: 2.5rem;
+}
+
+footer span {
+  font-size: 1.8rem;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: 70% 40%;
+  width: 100%;
+  grid-template-rows: 1fr;
+  height: 100%;
+  padding-top: 3em;
+}
+
+form {
+  padding: 0 7em;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.floating-label {
+  color: rgba(255, 255, 255, .8);
+  font-family: var(--title-light-font);
+  font-size: 1rem;
+  line-height: 1.5;
+  position: absolute;
+  top: .8em;
+  left: 1em;
+  transition: .1s ease;
+  cursor: text;
+}
+
+.floating-label.top-label{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--subtitle-font);
+  font-size: 1.1rem;
+  right: 0;
+  left: auto;
+  top: -1em;
+  padding-left: .5em;
+}
+
+.input {
+  background: rgba(0, 0, 0, .5);
+  margin-bottom: 2em;
+  height: 3rem;
+  width: 100%;
+  border: none;
+}
+.input:focus {
+  outline: none;
+  border-bottom: 1.7px solid white;
+}
+.input-textarea {
+  border: none;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 10em;
+  background: rgba(0, 0, 0, .5);
+}
+
+.input-textarea:focus {
+  outline: 1px solid rgba(255, 255, 255, .8);
+}
+/* end footer */
 
 /* helper styles */
 .visually-hidden {
