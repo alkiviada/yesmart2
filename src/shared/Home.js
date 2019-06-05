@@ -137,10 +137,14 @@ class Home extends Component {
            <label className={this.state.message.label_cn} htmlFor="message" ref={this.messageLabelRef}>Your Message</label>
            <textarea className="input-textarea" onFocus={(e) => this.hideLabel(e, this.messageLabelRef)} onInput={(e) => this.inputOrLabel(e, this.messageLabelRef)} onBlur={(e) => this.inputOrLabel(e, this.messageLabelRef)} type="message" value={this.state.message.value} id="message" name="message" onChange={this.handleValueChange} />
          </div>
-           <div className="input-wrapper">
-            <button type="button" className="aqr-send-button" onClick={this.sendMessage}>Submit</button>
-           </div>
+            <button type="button" className="submit-button" onClick={this.sendMessage}>Submit</button>
          </form>
+         <div className="contact-info">
+         <span>CONTACT DETAILS</span>
+         <a className="email-link">info@yesmart.solutions</a>
+         <a className="tel-link">12345</a>
+         <a className="external-link">FB</a>
+         </div>
         </div>
         </footer>
       </Fragment>
