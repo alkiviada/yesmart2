@@ -106,6 +106,10 @@ body {
   font-size: 1.2rem;
   position: absolute;
 }
+.top-nav-link {
+  position: relative;
+}
+
 .top-nav-link:link {
   color: white;
   text-decoration: none;
@@ -123,6 +127,7 @@ body {
 
 .top-nav-link:active, .top-nav-button:active {
   font-weight: bolder;
+  top: 3px;
   color: rgba(var(--red-text-rgb), 1);
 }
 
@@ -145,6 +150,7 @@ body {
 .top-nav-button {
   background-color: inherit;
   border: none;
+  position: relative;
   color: white;
   font-family: var(--body-font);
   font-size: 1.1rem;
@@ -162,10 +168,11 @@ body {
   border-width: 1px;
   height: 100%;
 }
+
 .top-nav-button:hover {
   color: rgba(var(--red-text-rgb), .8);
   font-weight: 600;
-  transform: translate(5px);
+  transform: translateY(1px);
 }
 
 .top-nav {
@@ -188,6 +195,7 @@ body {
   color: white;
   text-transform: uppercase;
 }
+
 /* end header */
 
 /* start skip-title */
@@ -420,21 +428,13 @@ footer {
   height: 37em;
 }
 
-.footer-bottom-wrapper {
-  background-color: rgba(167, 60, 63, 1);
-  mix-blend-mode: overlay;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr 6em;
-}
 
 footer nav {
   margin-top: 1em;
   margin-left: 1em;
   color: white;
   font-family: var(--title-font);
-  font-weight: lighter;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 1.3rem;
 }
@@ -460,22 +460,13 @@ footer h3 {
   padding-left: 1em;
 }
 
-.faq-link:link {
-  color: rgba(241, 119, 120, 1);
-  text-decoration: none; 
-}
-
-.faq-link:hover, .faq-link:active {
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.faq-link:visited {
-  color: #f18a8ba3;
-}
 
 footer span {
   font-size: 1.4rem;
+}
+
+footer .current {
+  font-weight: bold;
 }
 
 .footer-contact {
@@ -505,18 +496,23 @@ form {
   width: 8em;
   height: 3em;
   left: 100%;
-  bottom: 0;
+  bottom: .5em;
   font-family: var(--title-font);
   font-weight: bold;
   font-size: 1.2rem;
   background: rgba(var(--black-color-rgb), 1);
   color: white;
   border: none;
+  transition: all 250ms cubic-bezier(.215,.61,.355,1);
 }
 
 .submit-button:hover {
   color: rgba(var(--red-text-rgb), .8); 
-  transition: color 250ms cubic-bezier(.215,.61,.355,1);
+  transform: translateY(1px);
+}
+
+.submit-button:active {
+  color: rgba(var(--red-text-rgb), 1); 
   transform: translate(2px, 2px);
 }
 
@@ -575,6 +571,9 @@ form {
 .input-textarea:focus {
   outline: 1px solid rgba(255, 255, 255, .8);
 }
+
+/* contact info */
+
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -596,13 +595,19 @@ form {
   text-align: center;
   padding-top: .6em;
   color: rgba(255, 255, 255, .7);
+  transition: all 250ms cubic-bezier(.215,.61,.355,1);
+  position: relative;
 }
 
 .external-link:hover {
-  transform: translate(2px, 2px);
+  transform: translateY(1px);
   color: var(--red-text-color);
-  transition: all 250ms cubic-bezier(.215,.61,.355,1);
 }
+
+.external-link:active {
+  top: 3px;
+}
+
 .external-link:focus {
   outline: none;
   border-style: solid;
@@ -639,8 +644,30 @@ form {
   transition: all 500ms cubic-bezier(.215,.61,.355,1);
 }
 
-footer .current {
+/* end contact info */
+
+.faq-link:link {
+  color: rgba(241, 119, 120, 1);
+  text-decoration: none; 
+}
+
+.faq-link:visited {
+  color: #f18a8ba3;
+}
+
+.faq-link:hover, .faq-link:active {
   font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.footer-bottom-wrapper {
+  background-color: rgba(167, 60, 63, 1);
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 6em;
+  grid-template-rows: 1fr;
 }
 
 .ripe-member {
@@ -655,6 +682,9 @@ footer .current {
   font-weight: bold;
 }
 
+
+/* copyright start */
+
 .yesm-studio-text {
   font-family: var(--studio-font);
   font-size: 2px;
@@ -662,16 +692,16 @@ footer .current {
 }
 
 .yesm-studio {
-  width: 23%;
+  width: 20%;
   height: auto;
-  margin-bottom: -.4em;
+  margin-bottom: -.6em;
   margin-left: .2em;
 }
 
 .copyright {
-  justify-self: center;
+  width: 60%;
+  justify-self: end;
   align-self: end;
-  padding-left: 3em;
 }
 
 .copyright span {
@@ -679,6 +709,8 @@ footer .current {
   padding-bottom: .5em;
   display: inline-block;
 }
+/* copyright end */
+
 /* end footer */
 
 /* helper styles */

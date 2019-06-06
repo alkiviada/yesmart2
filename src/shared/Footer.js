@@ -116,7 +116,7 @@ class Footer extends Component {
            <span>CONTACT DETAILS</span>
            <a className="email-link" href="mailto:info@yesmart.solutions">info@yesmart.solutions</a>
            <a className="tel-link" href="tel:123456">12345</a>
-           <a className="external-link" href="http://fb" title="YeSmart FaceBook">f</a>
+           <a className="external-link" href="http://fb" rel="nofollow" target="_blank" title="YeSmart FaceBook">f</a>
          </div>
          </div>
          <h3><a href="/faq" className={ active == '/faq' ? "faq-link current" : "faq-link"}>FAQ</a></h3>
