@@ -68,7 +68,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: auto auto 3em 1fr 5em;
+  grid-template-rows: auto auto 3em 1fr 37em;
 }
 
 /* end general container */
@@ -413,11 +413,11 @@ footer {
 
   color: white;
   display: grid;
-  grid-template-rows: 4em 2em 1fr 2em 7em;
+  grid-template-rows: 4em 2em auto 3em 8em;
   place-items: center;
   justify-items: center;
   align-items: center;
-  height: 40em;
+  height: 37em;
 }
 
 .footer-bottom-wrapper {
@@ -483,19 +483,20 @@ footer span {
   grid-template-columns: 1fr .5fr;
   width: 100%;
   grid-template-rows: 1fr;
-  height: 18em;
+  height: auto;
   padding-top: 3em;
 }
 
 form {
   padding: 0 5em;
   position: relative;
-  height: max-content;
+  height: auto;
 }
 
 .input-wrapper {
   position: relative;
   width: 100%;
+  height: auto;
 }
 
 .submit-button {
@@ -643,8 +644,8 @@ footer .current {
 }
 
 .ripe-member {
-  width: 200%;
-  height: auto;
+  width: 180%;
+  height: 100%;
   margin: 0 0 0 -7em;
   fill: white;
 }
@@ -661,8 +662,22 @@ footer .current {
 }
 
 .yesm-studio {
-  width: 20%;
-  overflow: visible;
+  width: 23%;
+  height: auto;
+  margin-bottom: -.4em;
+  margin-left: .2em;
+}
+
+.copyright {
+  justify-self: center;
+  align-self: end;
+  padding-left: 3em;
+}
+
+.copyright span {
+  font-size: 1rem;
+  padding-bottom: .5em;
+  display: inline-block;
 }
 /* end footer */
 

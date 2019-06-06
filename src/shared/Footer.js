@@ -130,11 +130,11 @@ class Footer extends Component {
            </nav>
       <div className="copyright">
       <span className="copyright-span">&copy; 2019</span>
-      <svg viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" className="yesm-studio"> 
+      <svg viewBox="0 0 10 4" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" className="yesm-studio"> 
         <defs>
         <path id="yesm-studio-path" d="M 0 3 L 3 3 M 3 3.5 L 10 3.5" className="yesm-studio-path"/>
         </defs>
-        <text className="yesm-studio-text" textLength="40">
+        <text className="yesm-studio-text" textLength="8">
           <textPath xlinkHref="#yesm-studio-path" className="yesm-studio-text-path">
             YeStudio
           </textPath>
