@@ -521,8 +521,18 @@ footer nav {
   font-family: var(--title-font);
   font-weight: bold;
   text-transform: uppercase;
+}
+
+
+footer nav li {
   font-size: 1.3rem;
 }
+@media(max-width: 450px) {
+footer nav li {
+  font-size: 1.1rem;
+}
+}
+
 
 footer ul {
 
@@ -817,6 +827,13 @@ form {
 }
 }
 
+@media(max-width: 500px) {
+.ripe-member {
+  width: 120%;
+  margin: 0 0 0 -2.5em;
+}
+}
+
 .yesm-is-ripe-member {
   font-size: 80px;
   font-weight: bold;
@@ -841,6 +858,43 @@ form {
   width: 60%;
   justify-self: end;
   align-self: end;
+}
+
+@media(max-width: 500px) {
+.copyright {
+  width: 80%;
+}
+}
+@media(max-width: 450px) {
+.copyright {
+  width: 100%;
+}
+}
+@media(max-width: 400px) {
+.copyright {
+  width: 110%;
+}
+}
+@media(max-width: 380px) {
+.copyright {
+  width: 120%;
+}
+}
+@media(max-width: 380px) {
+.copyright {
+  justify-self: unset;
+  width: 130%;
+}
+}
+@media(max-width: 350px) {
+.copyright {
+  width: 140%;
+}
+}
+@media(max-width: 340px) {
+.copyright {
+  width: 150%;
+}
 }
 
 .copyright span {
