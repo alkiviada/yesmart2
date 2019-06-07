@@ -291,14 +291,13 @@ body {
 /* start title */
 .title-wrapper {
   position: relative;
-  height: calc(100vh - 2.4em);
+  height: calc(100vh - 3em);
   width: 100vw;
   display: grid;
   background-image: url("city.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-color: var(--bg-color);
   mix-blend-mode: multiply;
 }
