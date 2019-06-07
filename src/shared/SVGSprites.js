@@ -5,7 +5,7 @@ class SVGSprites extends Component {
     return (
 <svg className="svg-icons" width="0" height="0" aria-hidden="true"
      xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink">
-<symbol id="ipv-icon" viewBox="-4 -4 30 20">
+<symbol id="ipv-icon" viewBox="-4 -4 30 27">
 <rect x="-1.5" y="-4" width="23" height="23" className="icon-wrapper" />
 <g className="icon-internals">
 <rect x="2" y="1" width="16" height="9"  />
