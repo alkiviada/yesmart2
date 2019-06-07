@@ -565,6 +565,12 @@ footer span {
 }
 }
 
+@media(max-width: 360px) {
+footer span {
+  font-size: 1.05rem;
+}
+}
+
 footer .current {
   font-weight: bold;
 }
