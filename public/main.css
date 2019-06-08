@@ -70,7 +70,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: auto 3em 1fr auto;
+  grid-template-rows: auto auto 3em 1fr auto;
 }
 
 /* end general container */
@@ -242,9 +242,6 @@ body {
 /* start skip-title */
 
 .skip-title {
-  position: absolute;
-  top: -2.4em;
-  z-index: 100;
   width: 100%;
   height: 2.4em;
   background-color: var(--bg-color);
@@ -298,7 +295,7 @@ body {
 /* start title */
 .title-wrapper {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 3em);
   width: 100vw;
   display: grid;
   -webkit-background-size: cover;
@@ -313,6 +310,11 @@ body {
   mix-blend-mode: multiply;
   background-attachment: scroll;
 
+}
+@media(max-width: 800px) {
+.title-wrapper {   
+  height: calc(100vh - 5em);
+  }
 }
 
 .title-svg {   
