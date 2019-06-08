@@ -294,8 +294,9 @@ body {
 
 /* start title */
 .title-wrapper {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100 - 2.5em);
   position: relative;
-  height: calc(100vh - 3em);
   width: 100vw;
   display: grid;
   -webkit-background-size: cover;
@@ -310,11 +311,6 @@ body {
   mix-blend-mode: multiply;
   background-attachment: scroll;
 
-}
-@media(max-width: 800px) {
-.title-wrapper {   
-  height: calc(100vh - 5em);
-  }
 }
 
 .title-svg {   
