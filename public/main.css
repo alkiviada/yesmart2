@@ -69,7 +69,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: auto auto 3em 1fr auto;
+  grid-template-rows: auto 3em 1fr auto;
 }
 
 /* end general container */
@@ -240,6 +240,10 @@ body {
 /* start skip-title */
 
 .skip-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.4em;
   background-color: var(--bg-color);
   display: grid;
   grid-template-areas: "button1 . button2";
@@ -291,7 +295,7 @@ body {
 /* start title */
 .title-wrapper {
   position: relative;
-  height: calc(100vh - 2.5em);
+  height: 100vh;
   width: 100vw;
   display: grid;
 }
@@ -300,7 +304,7 @@ body {
   content: "";
   display: block;
   width: 100%;
-  height: calc(100vh - 2.5em);
+  height: 100vh;
   z-index: -10;
   position: relative;
   top: 0;
