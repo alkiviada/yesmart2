@@ -18,6 +18,24 @@ class Home extends Component {
     this.skipToContactForm = this.skipToContactForm.bind(this) 
     this.mainRef = React.createRef();
     this.contactFormRef = React.createRef();
+    this.handleScroll = this.handleScroll.bind(this) 
+    this.state = { headerCn: '', width: 0, height: 0 };
+  }
+  handleScroll(e) {
+    const lastScrollY = window.scrollY
+    console.log(lastScrollY)
+    const hCn = '';
+    if (lastScrollY > this.state.width) {
+      this.setState({
+      headerCn: 'header-sticky'
+    });
+    } 
+    else {
+      this.setState({
+      headerCn: ''
+    });
+
+    }
   }
 
   componentDidMount() {
@@ -28,7 +46,9 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
   // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+  this.setState({ width: window.innerWidth, height: window.innerHeight })
 });
+    window.addEventListener('scroll', this.handleScroll);
   }
 
 
@@ -56,7 +76,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
           <button className="skip-title-button button1" aria-hidden="true" onClick={this.skipToMainClick} aria-label="skip to main">></button>
           <button className="skip-title-button button2" aria-hidden="true" onClick={this.skipToMainClick} aria-label="Skip to Main">></button>
         </div>
-        <Header headerRef={this.mainRef} toContact={this.skipToContactForm} />
+        <Header headerCn={this.state.headerCn} headerRef={this.mainRef} toContact={this.skipToContactForm} />
         <main  className="home" role="main">
           <Address />
           <ASystems />

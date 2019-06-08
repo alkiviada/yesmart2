@@ -9,8 +9,9 @@ class Header extends Component {
     const active = navLnks.find(l => l == location.pathname)
     const navLnksCnames = navLnks.reduce((o, l) =>
       (o[l] = active == l ? 'top-nav-link current' : 'top-nav-link', o), {});
+    const headerCn = this.props.headerCn ? this.props.headerCn + ' header' : 'header'
     return (
-        <header ref={this.props.headerRef} role="banner" className="header">
+        <header ref={this.props.headerRef} role="banner" className={headerCn}>
          <h1 role="heading" aria-label="Yesmart" className="title-header">
            <span className="big" aria-hidden="true">Y</span>
            <span className="small" aria-hidden="true">E</span>
