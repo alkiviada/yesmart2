@@ -11,6 +11,10 @@ class Header extends Component {
       (o[l] = active == l ? 'top-nav-link current' : 'top-nav-link', o), {});
     return (
         <header ref={this.props.headerRef} role="banner" className="header">
+        <div className="skip-title">
+          <button className="skip-title-button button1" aria-hidden="true" onClick={this.skipToMainClick} aria-label="skip to main">></button>
+          <button className="skip-title-button button2" aria-hidden="true" onClick={this.skipToMainClick} aria-label="Skip to Main">></button>
+        </div>
          <h1 role="heading" aria-label="Yesmart" className="title-header">
            <span className="big" aria-hidden="true">Y</span>
            <span className="small" aria-hidden="true">E</span>

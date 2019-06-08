@@ -41,10 +41,6 @@ class Home extends Component {
       <Fragment>
         <SVGSprites />
         <Title />
-        <div className="skip-title">
-          <button className="skip-title-button button1" aria-hidden="true" onClick={this.skipToMainClick} aria-label="skip to main">></button>
-          <button className="skip-title-button button2" aria-hidden="true" onClick={this.skipToMainClick} aria-label="Skip to Main">></button>
-        </div>
         <Header headerRef={this.mainRef} toContact={this.skipToContactForm} />
         <main  className="home" role="main">
           <Address />
