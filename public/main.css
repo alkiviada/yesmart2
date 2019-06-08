@@ -69,7 +69,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: auto 3em 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 /* end general container */
@@ -82,6 +82,7 @@ body {
   grid-template-columns: 1fr auto;
   background-color: black; 
   position: relative;
+  height: 3em;
 }
 
 
