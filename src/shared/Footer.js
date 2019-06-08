@@ -90,6 +90,7 @@ class Footer extends Component {
     const footerLnks = [ '/faq', ]
     const active = footerLnks.find(l => l == location.pathname)
     console.log(active);
+    console.log(this.props.contactFormRef)
     const footerLnksCnames = footerLnks.reduce((o, l) =>
       (o[l] = active == l ? 'current' : '', o), {});
     return (
@@ -97,7 +98,7 @@ class Footer extends Component {
         <h2 className="footer-head">Get in Touch</h2>
         <span>Got questions? We'd love to hear from you.</span>
         <div className="footer-contact">
-           <form className="form" ref={this.props.contactFormRef}>
+           <form className="form" ref={this.props.contactFormRef} >
              <div className="input-wrapper">
                <label className={this.state.username.label_cn} htmlFor="username" ref={this.userNameLabelRef}>Full Name</label>
                <input className="input" onFocus={(e) => this.hideLabel(e, this.userNameLabelRef)} onInput={(e) => this.inputOrLabel(e, this.userNameLabelRef)} onBlur={(e) => this.inputOrLabel(e, this.userNameLabelRef)} type="text" value={this.state.username.value} id="username" name="username" onChange={this.handleValueChange} />

@@ -20,6 +20,7 @@
 @font-face {
   font-family: titillium;
   src: url(TitilliumText25L004.otf);
+  font-feature-settings: "tnum";
 }
 @font-face {
   font-family: titillium;
@@ -69,7 +70,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto 3em 1fr auto;
 }
 
 /* end general container */
@@ -299,16 +300,6 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-}
-
-.title-wrapper:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100vh;
-  z-index: -10;
-  position: relative;
-  top: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -319,7 +310,10 @@ body {
   background-size: cover;
   background-color: var(--bg-color);
   mix-blend-mode: multiply;
+  background-attachment: scroll;
+
 }
+
 
 .title-svg {   
   width: 50%;
@@ -520,18 +514,6 @@ footer {
   justify-items: center;
   align-items: center;
   height: 100%;
-}
-
-footer:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  
-  
-  z-index: -10;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -540,11 +522,10 @@ footer:before {
   background-position: center;
   background-repeat: no-repeat;
 
-  background-color: rgba(var(--grey-color-rgb), .8);
+  background-color: rgba(var(--grey-color-rgb), .75);
 
   mix-blend-mode: multiply;
 }
-
 
 footer nav {
   margin-top: 1em;
@@ -812,7 +793,7 @@ form {
 
 .tel-link {
   text-decoration: none;
-  font-feature-settings: "onum";
+  font-feature-settings: "tnum";
   -webkit-font-feature-settings: "onum";
   font-variant-numeric: oldstyle-nums;
   color: rgba(255, 255, 255, .6);

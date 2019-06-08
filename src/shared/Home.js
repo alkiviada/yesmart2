@@ -25,13 +25,15 @@ class Home extends Component {
   skipToMainClick(e) {
     e.preventDefault()
     const domNode = ReactDOM.findDOMNode(this.mainRef.current)
+    console.log(domNode.offsetTop)
     window.scrollTo(0, domNode.offsetTop)
   }
 
   skipToContactForm(e) {
+    console.log('hmm');
     e.preventDefault()
     const domNode = ReactDOM.findDOMNode(this.contactFormRef.current)
-    window.scrollTo(0, domNode.offsetTop)
+    window.scrollTo(0, domNode.offsetParent.offsetTop)
   }
 
   render() {
